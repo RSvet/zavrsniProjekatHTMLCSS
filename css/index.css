@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*navigation with links*/
+.navbar {   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    border-bottom: 5px solid orange;        
+}
+
+.icon {    
+    width: 40px; 
+    margin-left: 10px;   
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;     
+       
+}
+
+.navbar-links li {
+    list-style-type: none;
+       
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color:orange;    
+    display: block;
+    padding: 15px; 
+         
+}  
+
+.navbar-links li a:hover {
+    
+    background-color: orange;
+    color: white;
+    
+  } 
+
+/*header image*/
+.header-img {
+    background-image: url('../img/travel_blog.jpeg');
+    background-size: cover;
+    background-position: center;   
+    min-height: 400px;
+}    
+
+/*first section with offer images*/
+.offer-text {
+    text-align: center;
+    font-size: 15px;              
+}
+
+.offer-text h3 {
+    color: orange;   
+    margin-top: 25px;    
+    font-size: 20px;  
+}
+
+.offer-options {    
+    display: grid;    
+    grid-template-columns: 10% 10% 10% 10%;
+    justify-content: center; 
+    justify-items: center;    
+    column-gap: 130px;
+    margin-bottom: 25px;    
+}
+
+.offer-options p {
+    text-align: center;
+    margin:0; 
+    padding: 10px;
+    font-size: 14px;    
+}
+
+.offer-options img {
+    padding: 12px;
+    width: 120px;    
+}
+
+.offer-options .bold-text {
+    font-weight: bold;    
+}
+
+.offer-options .ital {
+    font-style: italic;
+    padding-bottom: 0;
+    text-align: center;    
+}
+
+.offer-options .ital:hover {
+    cursor: pointer;
+}
+
+/*upload picture div with button for galery page*/
+.upload-part {
+    background-image: url('../img/contest_image.jpg');
+    background-size: cover;
+    background-position: center;    
+    min-height: 500px;
+    border-top: 2px solid orange;    
+}
+
+.upload-part .centered-div {
+    text-align: left;
+    width: 200px;
+    margin: auto;
+    font-size: 14px;       
+}
+
+.upload-part .centered-div h3 {
+    font-size: 20px;
+}
+
+.upload-part .centered-div button.details {
+    background-color: rgb(0, 0, 0, 0);
+    padding: 9px 10px;
+    border-left: 2px solid gray;
+    border-top: 2px solid gray;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 11px;   
+}
+
+.upload-part .centered-div button.details:hover{
+    cursor: pointer;
+}
+
+/*top 3 destinations flex box with buttons*/
+#top-destinations {
+    color: orange;   
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;  
+}
+
+.dest-container {
+    display: flex;
+    justify-content: center;    
+    margin-bottom: 20px;    
+}
+
+.dest-container .item {    
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    width: 20%;
+    min-height: 545px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;             
+}
+.dest-container .item.first {
+    background-image: url('../img/venice.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.dest-container .item.second {
+    background-image: url('../img/paris.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.dest-container .item.third {
+    background-image: url('../img/rome.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.dest-container .item button {
+    margin-left:auto;
+    margin-right:auto; 
+    background-color: rgba(240, 187, 12, 0.3);
+    border: 1px solid white;
+    color: white;
+    font-size: 10px;
+    padding: 8px;   
+}
+
+.dest-container .item button:hover{
+    cursor:pointer;
+}
+
+.dest-container .item h3 {   
+   margin-bottom:0;
+   color: white; 
+   font-size: 20px;   
+}
+
+/*footer*/
+.footer { 
+    font-size:13px;   
+    background-color: orange;
+    padding: 2px 0;   
+    color: white;    
+    display: flex;
+    justify-content: center;
+}
+
+/*laptop view*/
+@media (max-width:1024px) {    
+
+    .offer-options{
+    grid-template-columns: 20% 20%;
+    column-gap: 35%;
+    }   
+
+    .ital {
+        border-bottom: 1px dashed orange;
+    }
+    .dest-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px ; 
+        margin-bottom: 25px;       
+    }
+    .dest-container .item {
+        width: 75%;             
+    }
+
+    .dest-container .item button {
+       margin-bottom: 130px;
+    }
+    
+}
+
+@media (max-width:555px) {
+    .navbar-links li a {
+        padding: 15px 2px;        
+    }
+}
+
+/*mobile view*/
+@media (max-width:400px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links{
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .navbar-links li a {
+        padding: 5px 10px;
+    }
+
+    .offer-text {
+        margin-left: 15px;
+        margin-right: 15px; 
+    }
+
+    .offer-options {
+        grid-template-columns: 40%;
+    }    
+    
+    .dest-container .item button {
+        margin-bottom: 280px;
+     }
+}   
